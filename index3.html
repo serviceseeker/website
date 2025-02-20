@@ -48,7 +48,19 @@
                 <label class="block font-semibold">Upload Image/Plan</label>
                 <input type="file" name="file" class="w-full p-2 border rounded-lg">
             </div>
-            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-lg">Preview Request</button>
+            <button type="button" class="w-full bg-blue-600 text-white p-2 rounded-lg" onclick="submitForm()">Submit Request</button>
+
+            <script>
+                function submitForm() {
+                    // Show popup message
+                    alert("Submission complete! You can make edits to your post at any time.");
+            
+                    // Redirect to index2.html
+                    window.location.href = "index2.html";
+                }
+            </script>
+            
+
         </form>
     </div>
 </body>
