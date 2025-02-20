@@ -100,6 +100,29 @@
                 <label for="services">Services Offered:</label>
                 <textarea id="services" rows="3" required></textarea>
 
+                <div>
+                    <label class="block font-semibold">Category</label>
+                    <select name="category[]" class="w-full p-2 border rounded-lg" multiple required>
+                        <option value="Plumbing">Plumbing</option>
+                        <option value="Electrical">Electrical</option>
+                        <option value="Remodeling">Remodeling</option>
+                        <option value="Painting">Painting</option>
+                        <option value="Landscaping">Landscaping</option>
+                    </select>
+                </div>
+                
+                <!-- Display selected items -->
+                <p class="mt-2 font-semibold">Selected Categories:</p>
+                <ul id="selectedCategories"></ul>
+                
+                <script>
+                    document.querySelector("select[name='category[]']").addEventListener("change", function() {
+                        let selectedOptions = Array.from(this.selectedOptions).map(option => option.value);
+                        document.getElementById("selectedCategories").innerHTML = selectedOptions.map(item => `<li>${item}</li>`).join("");
+                    });
+                </script>
+                
+
                 <label for="qualifications">Qualifications & Certifications:</label>
                 <textarea id="qualifications" rows="3"></textarea>
 
