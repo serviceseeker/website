@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Post a Service Request</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 text-gray-900 flex justify-center items-center min-h-screen">
+    <div class="p-6 max-w-2xl mx-auto bg-white shadow-md rounded-lg">
+        <h2 class="text-xl font-bold mb-4">Post a Service Request</h2>
+        <form action="#" method="POST" class="space-y-4">
+            <div>
+                <label class="block font-semibold">Title</label>
+                <input type="text" name="title" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <div>
+                <label class="block font-semibold">Description</label>
+                <textarea name="description" class="w-full p-2 border rounded-lg" required></textarea>
+            </div>
+            <div>
+                <label class="block font-semibold">Category</label>
+                <select name="category" class="w-full p-2 border rounded-lg" required>
+                    <option value="Plumbing">Plumbing</option>
+                    <option value="Electrical">Electrical</option>
+                    <option value="Remodeling">Remodeling</option>
+                </select>
+            </div>
+            <div class="flex space-x-2">
+                <div>
+                    <label class="block font-semibold">Budget Min ($)</label>
+                    <input type="number" name="budgetMin" class="w-full p-2 border rounded-lg" required>
+                </div>
+                <div>
+                    <label class="block font-semibold">Budget Max ($)</label>
+                    <input type="number" name="budgetMax" class="w-full p-2 border rounded-lg" required>
+                </div>
+            </div>
+            <div>
+                <label class="block font-semibold">Location</label>
+                <input type="text" name="location" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <div>
+                <label class="block font-semibold">Desired Completion Date</label>
+                <input type="date" name="completionDate" class="w-full p-2 border rounded-lg" required>
+            </div>
+            <div>
+                <label class="block font-semibold">Upload Image/Plan</label>
+                <input type="file" name="file" class="w-full p-2 border rounded-lg">
+            </div>
+            <button type="submit" class="w-full bg-blue-600 text-white p-2 rounded-lg">Preview Request</button>
+        </form>
+    </div>
+</body>
+</html>
